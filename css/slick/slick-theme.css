@@ -1,0 +1,261 @@
+@charset 'UTF-8';
+/* Slider */
+.slick-loading .slick-list
+{
+    background: #fff url('./ajax-loader.gif') center center no-repeat;
+}
+
+/* Icons */
+@font-face
+{
+    font-family: 'slick';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('./fonts/slick.eot');
+    src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
+}
+/* Arrows */
+.slick-prev,
+.slick-next
+{
+    font-size: 0;
+    line-height: 0;
+
+    position: absolute;
+    bottom: 0;
+
+    display: block;
+
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+
+    cursor: pointer;
+
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus
+{
+    color: transparent;
+    outline: none;
+    background: transparent;
+}
+.slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before
+{
+    opacity: 1;
+}
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before
+{
+    opacity: .25;
+}
+
+.slick-prev:before,.slick-prev:after,
+.slick-next:before, .slick-next:after
+{
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+
+    
+    color: white;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev
+{
+    left: -40px;
+}
+
+.slick-prev:before
+{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 12px;
+    background-color: #bc2229;
+    left: 0;
+    top: 0;
+    transform: rotate(45deg);
+}
+.slick-prev:after
+{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 12px;
+    background-color: #bc2229;
+    left: 0;
+    bottom: 0;
+    transform: rotate(-45deg);
+}
+
+
+
+.slick-next
+{
+    right: -40px;
+}
+
+.slick-next:before
+{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 12px;
+    background-color: #bc2229;
+    right: 0;
+    top: 0;
+    transform: rotate(-45deg);
+}
+.slick-next:after
+{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 12px;
+    background-color: #bc2229;
+    right: 0;
+    bottom: 0;
+    transform: rotate(45deg);
+}
+
+
+
+/* Dots */
+.slick-dotted.slick-slider
+{
+    margin-bottom: 30px;
+}
+
+.slick-dots
+{
+    position: absolute;
+    bottom: 0px;
+
+    display: block;
+
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+
+    text-align: center;
+}
+.slick-dots li
+{
+    position: relative;
+
+    display: inline-block;
+
+    width: 11px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+
+    cursor: pointer;
+}
+.slick-dots li button
+{
+    font-size: 0;
+    line-height: 0;
+
+    display: block;
+
+    width: 6px;
+    height: 6px;
+    padding: 2px;
+    /*border: 1px solid rgb(153, 153, 153);*/
+    
+    cursor: pointer;
+
+    color: transparent;
+    border: 0; 
+    outline: none;
+    background: transparent;
+
+    position: absolute;
+    left: 5px;
+    bottom: 20px;
+}
+.slick-dots li button::before
+{
+   position: absolute;
+   content: '';
+   border: 1px solid grey;
+   border-radius: 50%;
+   left: -1px;
+   top: -1px;
+   width: 4px;
+   height: 4px;
+}
+
+.slick-dots li button::after
+{
+   position: absolute;
+   content: '';
+   border: 1px solid transparent;
+   border-radius: 50%;
+   left: 0;
+   top: 0;
+   width: 3px;
+   height: 3px;
+   background-color: transparent;
+}
+
+
+
+
+.slick-dots li button:hover,
+.slick-dots li button:focus,
+.slick-dots li.slick-active button::before
+{
+    outline: none;
+    border-color: #bc2229;
+}
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before
+{
+    opacity: 1;
+    border-color: #bc2229;
+}
+ 
+
+.slick-dots li.slick-active button::before
+{
+    outline: none;
+    border-color: #bc2229;
+    width: 7px;
+    height: 7px;
+    top: -2px;
+    left: -2px;
+}
+
+.slick-dots li.slick-active button::after
+{
+   position: absolute;
+   content: '';
+   border: 1px solid #bc2229;
+   border-radius: 50%;
+   left: 0;
+   top: 0;
+   width: 3px;
+   height: 3px;
+   background-color: #bc2229;
+}
